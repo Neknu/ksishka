@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/University/course2/ksishka/lab4/main.cpp
+iostream
+-
+vector2d.h
+D:/University/course2/ksishka/lab4/vector2d.h
+
+D:/University/course2/ksishka/lab4/vector2d.h
+
