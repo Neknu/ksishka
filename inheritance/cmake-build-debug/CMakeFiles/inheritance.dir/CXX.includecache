@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/University/course2/ksishka/inheritance/ArrayList.h
+List.h
+D:/University/course2/ksishka/inheritance/List.h
+
+D:/University/course2/ksishka/inheritance/List.h
+
+D:/University/course2/ksishka/inheritance/NodeList.h
+List.h
+D:/University/course2/ksishka/inheritance/List.h
+
+D:/University/course2/ksishka/inheritance/main.cpp
+iostream
+-
+ArrayList.h
+D:/University/course2/ksishka/inheritance/ArrayList.h
+NodeList.h
+D:/University/course2/ksishka/inheritance/NodeList.h
+
