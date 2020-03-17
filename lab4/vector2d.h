@@ -11,6 +11,8 @@ public:
     Vector2d();
     Vector2d(double x, double y);
 
+    ~Vector2d() = default;
+
     double getX();
     double getY();
 
@@ -19,6 +21,13 @@ public:
     static Vector2d right();
 
     static Vector2d plus(Vector2d a, Vector2d b);
+
+    static void print_hello();
+
+
+    double multiply(Vector2d another);
+
+    static double multiply(Vector2d a, Vector2d b);
 
 };
 

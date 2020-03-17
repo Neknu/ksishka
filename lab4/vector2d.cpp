@@ -34,3 +34,15 @@ Vector2d Vector2d::right() {
 Vector2d Vector2d::plus(Vector2d a, Vector2d b) {
     return Vector2d{a.getX() + b.getX(), a.getY() + b.getY()};
 }
+
+void Vector2d::print_hello() {
+    cout << "hello I'm vector2d class" << endl;
+}
+
+double Vector2d::multiply(Vector2d another) {
+    return (this->x * another.x + this->y * another.y);
+}
+
+double Vector2d::multiply(Vector2d a, Vector2d b) {
+    return (a.x * b.x + a.y * b.y);
+}

@@ -24,7 +24,7 @@ public:
     void add_back(int value) override;
     bool delete_back() override;
     bool find(int value) override;
-    void print() override;
+    void print(std::stringstream& out) override;
 };
 
 #endif //INHERITANCE_NODELIST_H

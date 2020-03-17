@@ -47,11 +47,11 @@ bool NodeList::find(int value) {
     return false;
 }
 
-void NodeList::print() {
+void NodeList::print(std::stringstream& out) {
     Node* current = head;
-    std::cout << "This is NodeList" << std::endl;
+    out << "This is NodeList" << std::endl;
     while(current != nullptr) {
-        std::cout << current->value << " ";
+        out << current->value << " ";
         current = current->next;
     }
 }

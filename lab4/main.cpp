@@ -5,11 +5,14 @@
 using namespace std;
 
 int main() {
+    // non-static
     Vector2d vector{4,5};
-    vector.print();
-    Vector2d::plus(vector, vector).print();
+    cout << vector.multiply(vector) << endl;
 
-    //    Vector2d::right().print();
+    //static
+    cout << Vector2d::multiply(Vector2d{3,2}, Vector2d{2,7}) << endl;
 
+    // non-static
+    cout << Vector2d{3,2}.multiply(Vector2d{2,7}) << endl;
     return 0;
 }

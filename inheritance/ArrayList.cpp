@@ -22,9 +22,9 @@ bool ArrayList::find(int value) {
     return false;
 }
 
-void ArrayList::print() {
-    std::cout << "This is ArrayList" << std::endl;
+void ArrayList::print(std::stringstream& out) {
+    out << "This is ArrayList" << std::endl;
     for(int i = 0; i < length; i++) {
-        std::cout << arr[i] << " ";
+        out << arr[i] << " ";
     }
 }

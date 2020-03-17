@@ -1,41 +1,36 @@
-#include <iostream>
 #include "ArrayList.h"
 #include "NodeList.h"
 
-void print_menu() {
-    std::cout << "1 - ArrayList" << std::endl;
-    std::cout << "2 - NodeList" << std::endl;
-}
 
-int main() {
-    int operation;
-    print_menu();
-    List* list;
-    std::cin >> operation;
-    switch (operation) {
-        case 1:
-            list = new ArrayList{};
-            break;
+#define CATCH_CONFIG_MAIN
+#include "../catch.hpp"
 
-        case 2:
-            list = new NodeList{};
-            break;
+#include <sstream>
 
-        default:
-            return 0;
+TEST_CASE("Working with List") {
+    List *list = nullptr;
+    std::stringstream out;
 
+    SECTION("Working with ArrayList") {
+        list = new ArrayList{};
+        list->print(out);
+        REQUIRE(out.str() == "This is ArrayList\n");
+    }
+    SECTION("Working with NodeList") {
+        list = new NodeList{};
+        list->print(out);
+        REQUIRE(out.str() == "This is NodeList\n");
     }
 
-    list->add_back(1);
-    list->add_back(2);
-    std::cout << "element 2" << "  " << list->find(2) << std::endl;
-    list->delete_back();
-    list->print();
-
-    delete(list);
-
-    return 0;
+    list->add_back(5);
+    REQUIRE(list->find(5));
+    REQUIRE(!list->find(2));
+    REQUIRE(list->delete_back());
+    REQUIRE(!list->delete_back());
 }
+
+
+
 
 //List
 //-add_back
